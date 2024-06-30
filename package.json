@@ -1,0 +1,31 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --inspect index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VietCuongHO/nodejs-blog.git"
+  },
+  "keywords": [
+    "cho47",
+    "blog",
+    "nodejs"
+  ],
+  "author": "cuongvietho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VietCuongHO/nodejs-blog/issues"
+  },
+  "homepage": "https://github.com/VietCuongHO/nodejs-blog#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
