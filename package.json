@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "convert": "node-sass --watch src/resources/scss/ -o src/public/css/",
     "start": "nodemon --inspect src/index.js"
   },
   "repository": {
@@ -29,6 +30,8 @@
   },
   "devDependencies": {
     "morgan": "^1.10.0",
-    "nodemon": "^3.1.4"
+    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.4",
+    "sass": "^1.77.8"
   }
 }

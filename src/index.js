@@ -6,13 +6,19 @@ import path from 'path'
 const app = express()
 const port = 3000
 const __dirname = path.resolve()
+const configPathName = (__dirname, pathConfig) =>{
+  return path.join(__dirname,pathConfig)
+}
+
+//Static file
+app.use(express.static(configPathName(__dirname, 'src/public')))
 
 //Template engine 
 app.engine('hbs', engine({
   extname: '.hbs'
 }));
 app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname,'src/resources/views'))
+app.set('views', configPathName(__dirname, 'src/resources/views'))
 
 //Http logger: Morgan will help to log http request 
 app.use(morgan('combined'))
