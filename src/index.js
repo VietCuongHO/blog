@@ -24,9 +24,9 @@ app.use(express.static(configPathName(__dirname, 'src/public')));
 
 //Template engine
 app.engine(
-  'hbs',
+     'hbs',
   engine({
-    extname: '.hbs',
+         extname: '.hbs',
   }),
 );
 app.set('view engine', 'hbs');
