@@ -31,7 +31,7 @@ app.set('view engine', 'hbs');
 app.set('views', configPathName(__dirname, 'src/resources/views'));
 
 //Http logger: Morgan will help to log http request
-app.use(morgan('combined'));
+app.use(morgan('combined'))
 
 route(app);
 
