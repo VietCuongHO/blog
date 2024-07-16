@@ -28,7 +28,7 @@ app.engine(
   engine({
          extname: '.hbs',
   }),
-);
+)
 app.set('view engine', 'hbs');
 app.set('views', configPathName(__dirname, 'src/resources/views'));
 
