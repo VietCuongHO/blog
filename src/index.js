@@ -29,7 +29,9 @@ app.engine(
          extname: '.hbs',
   }),
 )
-app.set('view engine', 'hbs');
+app.set('view engine', 
+  
+  'hbs');
 app.set('views', configPathName(__dirname, 'src/resources/views'));
 
 //Http logger: Morgan will help to log http request
