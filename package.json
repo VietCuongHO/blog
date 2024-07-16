@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
+    "prettier": "prettier --write --single-quote --trailing-comma all 'src/**/*.{js,json,scss}'",
     "test": "echo \"Error: no test specified\" && exit 1",
     "convert": "node-sass --watch src/resources/scss/ -o src/public/css/",
     "start": "nodemon --inspect src/index.js"
