@@ -23,10 +23,12 @@ app.use(express.json());
 app.use(express.static(configPathName(__dirname, 'src/public')));
 
 //Template engine
-app.engine('hbs', engine({
-  extname: '.hbs',
-}),
-)
+app.engine(
+  'hbs',
+  engine({
+    extname: '.hbs',
+  }),
+);
 app.set('view engine', 'hbs');
 app.set('views', configPathName(__dirname, 'src/resources/views'));
 
