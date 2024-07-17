@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "type": "module",
   "scripts": {
-    "prettier":"prettier --single-quote --trailing-comma all --write src/**/*.{js,json,scss}",
+    "prettier": "prettier --single-quote --trailing-comma all --write src/**/*.{js,json,scss}",
     "test": "echo \"Error: no test specified\" && exit 1",
     "convert": "node-sass --watch src/resources/scss/ -o src/public/css/",
     "start": "nodemon --inspect src/index.js"
@@ -35,7 +35,8 @@
   },
   "dependencies": {
     "express": "^4.19.2",
-    "express-handlebars": "^7.1.3"
+    "express-handlebars": "^7.1.3",
+    "mongoose": "^8.5.1"
   },
   "devDependencies": {
     "husky": "^9.0.11",
