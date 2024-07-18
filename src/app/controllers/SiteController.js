@@ -1,11 +1,10 @@
 import Courses from "../models/Course.js";
-import { convertMultiModeltoObject } from "../../utils/common/index.js";
+import { convertMultiModeltoObject } from "../../utils/common/handleFn.js";
 export class SiteController {
   index(req, res, next) {
     Courses.find({})
       .then((courses) => {
         const convertCourses = convertMultiModeltoObject(courses);
-        console.log(convertCourses);
         return res.render("home", { convertCourses });
       })
       .catch((err) => next(err));

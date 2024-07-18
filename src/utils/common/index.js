@@ -1,4 +1,2 @@
-export function convertMultiModeltoObject(array) {
-    //use toObject or toJSON is similar => convert to origin object
-    return array.map(item=>item.toObject())
-}
+export * from "./handleFn.js";
+export * from "./constant.js";
