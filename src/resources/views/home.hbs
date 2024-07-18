@@ -3,11 +3,19 @@
     {{#each convertCourses as |course|}}
       <div class="col-sm-6 col-lg-4 d-flex align-items-stretch">
         <div class="card" style="width: 18rem;">
-          <img src={{course.image}} class="img-fluid img-thumbnail img-center" alt="..." />
-          <div class="card-body ">
-            <h5 class="card-title">
-              {{course.name}}
-            </h5>
+          <a href="/courses/{{course.slug}}">
+            <img
+              src={{course.image}}
+              class="img-fluid img-thumbnail img-center"
+              alt="..."
+            />
+          </a>
+          <div class="card-body">
+            <a href="/courses/{{course.slug}}">
+              <h5 class="card-title">
+                {{course.name}}
+              </h5>
+            </a>
             <p class="card-text">
               {{course.description}}.
             </p>
