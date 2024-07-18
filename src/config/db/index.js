@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { mappingConnection } from "../../utils/common";
+import { mappingConnection } from "../../utils/common/index.js";
 
 export default function useConnect() {
   const url = "mongodb://127.0.0.1:27017/education_dev";

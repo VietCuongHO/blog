@@ -1,5 +1,5 @@
 import Courses from "../models/Course.js";
-import { convertMultiModeltoObject } from "../../utils/common/handleFn.js";
+import { convertMultiModeltoObject } from "../../utils/common/index.js";
 export class SiteController {
   index(req, res, next) {
     Courses.find({})
