@@ -1,8 +1,8 @@
-import Model from "../models/Course.js";
+import Courses from "../models/Course.js";
 export class SiteController {
   async index(req, res) {
-    const found = Model.find({})
-    console.log(found, typeof found)
+    const course = Courses.find({name: 'HO Viet Cuong'}).then(data=>console.log(data))
+    console.log(course)
     return res.render('home')
   }
   search(req, res) {
