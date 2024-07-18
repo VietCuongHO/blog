@@ -1,9 +1,14 @@
 import Courses from "../models/Course.js";
+import { convertMultiModeltoObject } from "../../utils/common/index.js";
 export class SiteController {
-  async index(req, res) {
-    const course = Courses.find({name: 'HO Viet Cuong'}).then(data=>console.log(data))
-    console.log(course)
-    return res.render('home')
+  index(req, res, next) {
+    Courses.find({})
+      .then((courses) => {
+        const convertCourses = convertMultiModeltoObject(courses);
+        console.log(convertCourses);
+        return res.render("home", { convertCourses });
+      })
+      .catch((err) => next(err));
   }
   search(req, res) {
     return res.render("search");
