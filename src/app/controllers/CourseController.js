@@ -10,4 +10,8 @@ export class CourseController {
       )
       .catch((err) => next(err));
   }
+
+  create(req, res) {
+    res.render('courses/create')
+  }
 }
