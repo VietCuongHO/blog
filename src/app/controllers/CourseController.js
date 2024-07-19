@@ -12,6 +12,18 @@ export class CourseController {
   }
 
   create(req, res) {
-    res.render('courses/create')
+    res.render("courses/create");
+  }
+
+  store(req, res, next) {
+    const formBody = {
+      image: `https://i.ytimg.com/vi/${req.body.videoId}/hqdefault.jpg`,
+      ...req.body,
+    };
+    const course = new Course(formBody);
+    course
+      .save()
+      .then(() => res.redirect("/"))
+      .catch(next);
   }
 }
